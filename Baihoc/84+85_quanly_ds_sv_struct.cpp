@@ -117,12 +117,12 @@ void nhapdssinhvien(sv ds[],int &n)
 {
     do
     {
-        cout<<endl<<"nhap vao n : ";
+        cout<<endl<<"nhap vao day : ";
         cin>>n;
     } while (n<=0);
     for (int i = 0; i < n; i++)
     {
-        cout<<"nhap vao sinh vien thu : "<<i<<endl;
+        //cout<<"nhap vao sinh vien thu : "<<i<<endl;
         capnhatsinhvien(ds[i]);
     }
 }
@@ -165,7 +165,7 @@ void xuatdssinhvientheolop(sv ds[],int n,char lop[])
     cout<<endl<<"ID   \t   Ten   \t Gioi Tinh \tNgay Sinh \t Tuoi \tDiem 1 \tDiem 2 \tDiem 3 \tDiem TB \tHoc Luc \tMa Lop"<<endl;
     for (int i = 0; i < n; i++)
     {
-        if (strcmp(ds[i].malop,strupr(lop)))
+        if (strcmp(ds[i].malop,lop))
         {
             insinhvien(ds[i]);
         }
@@ -177,9 +177,9 @@ void xuatdssinhvienxeploai(sv ds[],int n, char xeploai[])
     cout<<endl<<"ID   \t   Ten   \t Gioi Tinh \tNgay Sinh \t Tuoi \tDiem 1 \tDiem 2 \tDiem 3 \tDiem TB \tHoc Luc \tMa Lop"<<endl;
     for (int i = 0; i < n; i++)
     {
-        if (strcmp(ds[i].hocluc,strupr(xeploai))==0)
+        if (strcmp(ds[i].hocluc,xeploai)==0)
         {
-            insinhvien(ds[i]);
+            insinhvien(ds[i]);   
         }
     }
 }
@@ -198,7 +198,7 @@ void xoasinhvientheoid(sv ds[],int &n,int id)
 {
     for (int i = 0; i < n; i++)
     {
-        if (ds[i],id==id)
+        if (ds[i].id==id)
         {
             for (int j = i; j < n; j++)
             {
@@ -273,8 +273,10 @@ int main()
        cout<<"**  10 - Xoa sinh vien theo ID :                     **"<<endl;
        cout<<"**  0 - Thoat :                                      **"<<endl;
        cout<<"*******************************************************"<<endl;
+       cout<<"======================================================="<<endl;
        cout << "Nhap tuy chon: ";
        cin>>chon;
+       cout<<"======================================================="<<endl;
        switch(chon)
        {
            case 1:
@@ -282,9 +284,9 @@ int main()
            case 2:
            xuatdssinhvien(ds,n);break;
            case 3:
-           cout<<endl<<"MAX DTB = "<<timmax_diemtb(ds,n);break;
+           cout<<endl<<"MAX DTB = "<<timmax_diemtb(ds,n)<<endl;break;
            case 4:
-           cout<<endl<<"MIN Tuoi : "<<timmin_tuoi(ds,n);break;
+           cout<<endl<<"MIN Tuoi : "<<timmin_tuoi(ds,n)<<endl;break;
            case 5:
            char lop[20];
            cout<<endl<<"nhap ma lop : ";fflush(stdin);fgets(lop,sizeof(lop),stdin);xoaxuongdong(lop);
