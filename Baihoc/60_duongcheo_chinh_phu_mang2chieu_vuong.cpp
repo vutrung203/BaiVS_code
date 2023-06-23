@@ -67,6 +67,7 @@ int main()
 {
     nhapmatran(a,n);
     xuatmatran(a,n);
+    //<điều kiện>?<giá trị 1>:<giá trị 2>
     cout<<((kiemtradoixungquaduongcheochinh(a,n)==1?"mang doi xung qua duong cheo chinh":"mang kh doi xung qua duong cheo chinh"))<<endl;
     //printf("%s",(kiemtradoixungquaduongcheochinh(a,n)==1?"mang doi xung qua duong cheo chinh":"mang kh doi xung qua duong cheo chinh"));
     cout<<((kiemtradoixungquaduongcheophu(a,n)==1?"mang doi xung qua duong cheo phu":"mang kh doi xung qua duong cheo phu"));
