@@ -99,16 +99,19 @@ void insonguyento(int a[], int n){
 //c) sap xep thu tu cua cot theo chieu tang dan
 void sapxeptang(int x[100][100],int m,int n)
 {
-   int k=m*n;
-    for (int i = 0; i < k-1; i++)
+    int i, j, k;
+    for (j = 0; j < n; j++)
     {
-        for (int j = i+1; j < k; j++)
+        for (i = 0; i < m; i++)
         {
-            if (x[i/n][i%n]>x[j/n][j%n])
+            for (k = i + 1; k < m; k++)
             {
-                int temp = x[i/n][i%n];
-                x[i/n][i%n]=x[j/n][j%n];
-                x[j/n][j%n]=temp;
+                if (x[i][j] > x[k][j])
+                {
+                    int temp = x[i][j];
+                    x[i][j] = x[k][j];
+                    x[k][j] = temp;
+                }
             }
         }
     }
@@ -121,8 +124,7 @@ int main()
     cout<<timmax(a,m,n)<<endl;
 
     insonguyento(a,m,n);
-
-    /*
-    sapxeptang(a,m,n);
-    xuatmatran(a,m,n);*/
+    cout<<endl<<"-------------";
+    tangtheocot(a,m,n);
+    xuatmatran(a,m,n);
 }
