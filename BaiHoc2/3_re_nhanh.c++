@@ -25,9 +25,52 @@ int main()
     float d = 2.5;// 1 >= 0.5 <= 2
     int e = round(d);
     cout<<"lam tron : "<<e<<endl;
-    if (100>50)
+    
+    //if , 0 = false 1 = true
+    int n;
+    cout<<"nhap N : ";
+    cin>>n;
+    if ((n >= 100)&&(n <= 500))
     {
-        cout<<"xin chao";
+        cout<<"so chan"<<endl;
+    }
+
+    // if else 
+    if (n%2==0)
+    {
+        cout<<"so chan"<<endl;
+    }
+    else
+    {
+        cout<<"so le"<<endl;
     }
     
+    // else if
+    if (n==1)
+    {
+        cout<<"CN"<<endl;
+    }
+    else if (n==2)
+    {
+        cout<<"thu 2"<<endl;
+    }
+    else
+    {
+        cout<<"kh co"<<endl;
+    }
+    
+    // switch break
+    int day=4;
+    switch (day)
+    {
+        case 1:
+        cout<<"t2"<<endl;
+        break;
+        case 2:
+        cout<<"t3"<<endl;
+        break;
+    default:
+    cout<<"kh du lieu"<<endl;
+        break;
+    }
 }
