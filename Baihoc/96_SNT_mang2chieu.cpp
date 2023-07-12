@@ -52,7 +52,7 @@ int timmax(int x [100][100],int m , int n)
     return max;
 }
 //b)tim va in ra snt matran
-int ktrant(int n)
+int ktrsnt(int n)
 {
     if(n<2)
         return 0;
@@ -70,7 +70,7 @@ void insonguyento(int x[100][100],int m,int n)
     {
         for (int j = 0; j < n; j++)
         {
-            if(ktrant(x[i][j]))
+            if(ktrsnt(x[i][j]))
             {
                 cout<<x[i][j]<<"  ";
             }
