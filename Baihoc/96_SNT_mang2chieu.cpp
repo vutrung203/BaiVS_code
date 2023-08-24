@@ -125,6 +125,6 @@ int main()
 
     insonguyento(a,m,n);
     cout<<endl<<"-------------";
-    tangtheocot(a,m,n);
+    //tangtheocot(a,m,n);
     xuatmatran(a,m,n);
 }
