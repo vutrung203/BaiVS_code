@@ -1,42 +1,73 @@
-#include<iostream>
-#include<string.h>
- 
+#include <iostream>   //console io
+#include "cstring"     //string handling
+#include <algorithm>  //transform
+
 using namespace std;
- 
-int main(){
-    char msg[] = "MONARCHY";
-    char key[] = "HELLO";
-    int msgLen = strlen(msg), keyLen = strlen(key), i, j;
- 
-    char newKey[msgLen], mahoa[msgLen], giaima[msgLen];
- 
-    //generating new key
-    for(i = 0, j = 0; i < msgLen; ++i, ++j){
-        if(j == keyLen)
-            j = 0;
- 
-        newKey[i] = key[j];
-    }
- 
-    newKey[i] = '\0';
- 
-    //encryption
-    for(i = 0; i < msgLen; ++i)
-        mahoa[i] = ((msg[i] + newKey[i]) % 26) + 'A';
- 
-    mahoa[i] = '\0';
- 
-    //decryption
-    for(i = 0; i < msgLen; ++i)
-        giaima[i] = (((mahoa[i] - newKey[i]) + 26) % 26) + 'A';
- 
-    giaima[i] = '\0';
- 
-    cout<<"Nhap vao : "<<msg;
-    //cout<<endl<<"Key: "<<key;
-    //cout<<endl<<"New Key: "<<newKey;
-    cout<<endl<<"Ma Hoa : "<<mahoa;
-    cout<<endl<<"Giai Ma : "<<giaima;
- 
-return 0;
+
+struct to_upper {
+  int operator() (int ch)
+  {
+    return toupper(ch);
+  }
+};
+
+void encrypt_vigenere(const string& plaintext, const string& key, string& ciphertext){
+   int i, j, ch;
+   for(i = 0, j = 0; i < plaintext.length(); ++i, j++) {
+      if(j >= key.length()) 
+         j = 0;
+      if(plaintext[i] >= 'A' && plaintext[i] <= 'Z')
+         ch = ((plaintext[i] - 'A') + (key[j] - 'A')) % 26;
+      else
+         ch = plaintext[i] - 'A';  //only encrypt A-Z
+      ciphertext.append(string(1, (char)(ch + 'A')));
+   }
+}
+
+void decrypt_vigenere(const string& ciphertext, const string& key, string& plaintext){
+   int i, j, ch;
+   for(i = 0, j = 0; i < ciphertext.length(); ++i, j++) {
+      if(j >= key.length()) 
+         j = 0;
+
+      if(ciphertext[i] >= 'A' && ciphertext[i] <= 'Z')
+         ch = ((ciphertext[i] - 'A') + 26 - (key[j] - 'A')) % 26;
+      else
+         ch = ciphertext[i] - 'A';  //only decrypt A-Z
+
+      plaintext.append(string(1, (char)(ch + 'A')));
+   }
+}
+
+
+int main(int argc, char* argv[])
+{
+   cout << "nhap ma :\n";
+   char plaintext[256] = {0};
+   char key[256] = {0};
+   cin.getline (plaintext,256);
+   cout << "Ma : " << plaintext << endl;
+
+   cin.clear();  //clears any cin errors 
+
+   cout << "Enter key (can be any string):";
+
+   cin.getline (key, 256);
+
+   //uppercase KEY
+   transform(key, key+strlen(key), key, to_upper());
+
+   cout << "key chosen: " << key << endl;
+
+   string cipher;
+   //uppercase plaintext
+   transform(plaintext, plaintext+strlen(plaintext), plaintext, to_upper());
+   encrypt_vigenere(plaintext, key, cipher);
+
+   string decrypted;
+   decrypt_vigenere(cipher, key, decrypted);
+
+   cout<<endl<<"Ma Hoa : "<<cipher;
+   cout<<endl<<"Giai Ma : "<< decrypted <<endl;
+   return 0;
 }
