@@ -1,6 +1,6 @@
 package BaiJava;
 
-public class B5kieudulieu {
+public class B5_kieudulieu {
     public static void main(String[] args) 
     {
         String tensach = "lap trinh java";

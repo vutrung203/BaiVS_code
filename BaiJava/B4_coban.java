@@ -1,6 +1,6 @@
 package BaiJava;
 
-public class B4coban {
+public class B4_coban {
     public static void main(String[] args) 
     {
         String thongbao = "xin chao";
