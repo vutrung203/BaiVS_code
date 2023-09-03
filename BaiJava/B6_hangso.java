@@ -1,6 +1,6 @@
 package BaiJava;
 
-public class B6_hangso_6 {
+public class B6_hangso {
     public static void main(String[] args) 
     {
         final int x=100;
