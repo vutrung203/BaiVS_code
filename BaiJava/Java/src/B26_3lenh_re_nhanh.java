@@ -1,5 +1,3 @@
-package BaiJava;
-
 import java.util.Scanner;
 
 public class B26_3lenh_re_nhanh {

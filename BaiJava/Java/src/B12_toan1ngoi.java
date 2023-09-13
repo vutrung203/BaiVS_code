@@ -1,5 +1,3 @@
-package BaiJava;
-
 public class B12_toan1ngoi {
     public static void main(String[] args) 
     {

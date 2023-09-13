@@ -1,5 +1,3 @@
-package BaiJava;
-
 import java.util.Scanner;
 
 public class B16_ham_math {

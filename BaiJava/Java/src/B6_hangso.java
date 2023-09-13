@@ -1,5 +1,3 @@
-package BaiJava;
-
 public class B6_hangso {
     public static void main(String[] args) 
     {

@@ -1,5 +1,3 @@
-package BaiJava;
-
 import java.util.Scanner;
 
 public class B27a_mang {

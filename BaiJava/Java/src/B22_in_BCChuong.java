@@ -1,5 +1,3 @@
-package BaiJava;
-
 import java.util.Scanner;
 
 public class B22_in_BCChuong {

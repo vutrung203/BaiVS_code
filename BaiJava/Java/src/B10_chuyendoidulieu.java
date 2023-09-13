@@ -1,5 +1,3 @@
-package BaiJava;
-
 public class B10_chuyendoidulieu {
     public static void main(String[] args) 
     {

@@ -1,5 +1,3 @@
-package BaiJava;
-
 import java.util.Scanner;
 
 public class B25_do_while {
