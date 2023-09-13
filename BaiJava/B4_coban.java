@@ -1,3 +1,5 @@
+package BaiJava;
+
 public class B4_coban {
     public static void main(String[] args) 
     {

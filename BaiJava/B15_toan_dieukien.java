@@ -1,3 +1,5 @@
+
+package BaiJava;
 import java.util.Scanner;
 
 public class B15_toan_dieukien {

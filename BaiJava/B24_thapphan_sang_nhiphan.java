@@ -1,3 +1,5 @@
+package BaiJava;
+
 import java.util.Scanner;
 
 public class B24_thapphan_sang_nhiphan {

@@ -1,3 +1,5 @@
+package BaiJava;
+
 public class B5_kieudulieu {
     public static void main(String[] args) 
     {
