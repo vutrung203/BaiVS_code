@@ -4,4 +4,4 @@ for x in range(x):
     if (x % 2 == 1):
         print (x,(" "),end='')
         tong+=x
-        print(tong)
+print("tong cua so le la : ",tong)
