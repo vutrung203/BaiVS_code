@@ -1,11 +1,11 @@
 def move_positive_to_front(lst):
-    positive_elements = [num for num in lst if num > 0]
-    negative_elements = [num for num in lst if num <= 0]
+    positive = [num for num in lst if num > 0]
+    negative = [num for num in lst if num <= 0]
     
-    return positive_elements + negative_elements
+    return positive + negative
 
 # Danh sách ban đầu
-nums = [-2, 3, -5, 6, -1, 4, -8, 9]
-updated_nums = move_positive_to_front(nums)
+so = [-2, 3, -5, 6, -1, 4, -8, 9]
+somoi = move_positive_to_front(so)
 
-print(updated_nums)
+print(somoi)
