@@ -18,10 +18,11 @@ def max_subarray_sum(arr):
     return max_sum, start_index, end_index
 
 # Example usage:
-arr = [2, 3, -8, -3, 4, -2, 6, -5]
+arr = [-3, 4, 6, 0, -2, 1, 3, 7, 8, -5, 4, 20, 1]
 max_sum, start, end = max_subarray_sum(arr)
 if max_sum > 0:
     print("Đoạn con có tổng lớn nhất là:", arr[start:end+1])
     print("Tổng của đoạn con là:", max_sum)
 else:
     print("Không có đoạn con dương nào trong danh sách.")
+#-3,4,6,0,-2,1,3,,7,8,-5,4,20,1
