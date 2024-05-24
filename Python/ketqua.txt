@@ -1,0 +1,17 @@
+1a. Số trường: 14, Số mẫu: 5000
+1b. Giải thích các trường dữ liệu:
+- Age: Tuổi (năm)
+- Experience: Kinh nghiệm (năm)
+- Income: Thu nhập (USD)
+- CCAvg: Chi tiêu trung bình trong tháng (USD)
+- Personal Loan: Vay vốn cá nhân (0: không, 1: có)
+- Mortgage: Vay thế chấp (0: không, 1: có)
+
+2. Bảng thống kê Min, Max, Trung bình:
+          Age  Experience    Income
+min   23.0000     -3.0000    8.0000
+max   67.0000     43.0000  224.0000
+mean  45.3384     20.1046   73.7742
+
+3a. Số người dưới 30 có thu nhập trên 50.000$: 0
+3b. Số người dưới 30 có kinh nghiệm trên 5 năm: 0
